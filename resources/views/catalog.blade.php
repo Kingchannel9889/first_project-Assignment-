@@ -8,12 +8,24 @@
 </head>
 <body>
     @include('pages.header')
-    <h1>Catalog Page</h1>
+    <h1>Catalog</h1>
+    
+    <h2>List of customer names</h2>
 
+    @php
+        $customers =[
+        'John Doe',
+        'Michael Smith',
+        'Jordan',
+        'Johny Smith',
+        'Sally'
+    ];
+    @endphp
 
+    @foreach ($customers as $index => $cus)
+        <p> {{ $index + 1 }}, Name: {{ $cus }}</p>
+    @endforeach
 
     @include('pages.footer')
-
-
 </body>
 </html>

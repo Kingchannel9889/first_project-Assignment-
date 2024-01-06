@@ -30,4 +30,3 @@ Route::get('/intro' ,function(){
     return view('intro');
 });
 
-
